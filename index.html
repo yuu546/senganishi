@@ -1,43 +1,217 @@
 <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#276749">
+  <title>千貫石ため池ガイド</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<html lang="ja"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>千貫石ため池ガイド</title>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+    }
 
-<style> body { font-family: sans-serif; margin: 0; background-color: #eef7ee; color: #263b2b; } header { background-color: #276749; color: white; text-align: center; padding: 24px 12px; } main { max-width: 900px; margin: auto; padding: 20px; } section { background: white; padding: 18px; margin-bottom: 18px; border-radius: 12px; } button { background-color: #276749; color: white; border: none; border-radius: 8px; padding: 12px 18px; margin: 5px; font-size: 16px; cursor: pointer; } button:hover { background-color: #1c4532; } .view { width: 100%; height: 400px; border: 0; border-radius: 10px; } @media (max-width: 600px) { .view { height: 300px; } } </style>
+    body {
+      font-family: sans-serif;
+      background-color: #eef7ee;
+      color: #263b2b;
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
 
+    header {
+      background-color: #276749;
+      color: white;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.45rem, 5vw, 2rem);
+    }
+
+    header p {
+      margin: 0;
+    }
+
+    main {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    section {
+      min-width: 0;
+      width: 100%;
+      background: white;
+      padding: 18px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+    }
+
+    h2 {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      line-height: 1.4;
+    }
+
+    .view {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: clamp(280px, 65vw, 450px);
+      border: 0;
+      border-radius: 10px;
+    }
+
+    .map-wrap {
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    a {
+      overflow-wrap: anywhere;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button {
+      background-color: #276749;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 0;
+      font-size: 16px;
+      cursor: pointer;
+      min-height: 44px;
+    }
+
+    button:hover {
+      background-color: #1c4532;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #e0a800;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 12px;
+      }
+
+      section {
+        padding: 16px;
+      }
+
+      .view {
+        height: 62vw;
+        min-height: 260px;
+        max-height: 360px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+<body>
+  <header>
+    <h1>🌿 千貫石ため池ガイド</h1>
+    <p>360°の景色と音声で楽しむ自然体験</p>
+  </header>
 
-<body> <header> <h1>🌿 千貫石ため池ガイド</h1> <p>360°の景色と音声で楽しむ自然体験</p> </header>
+  <main>
+    <section>
+      <h2>📍 千貫石ため池を360°体験！</h2>
+      <p>景色をドラッグして、周囲を見回してみよう！</p>
 
-<main> <section> <h2>📍 千貫石ため池を360°体験！</h2> <p>景色をドラッグして、周囲を見回してみよう！</p>
+      <div class="map-wrap">
+        <iframe
+          class="view"
+          src="https://www.google.com/maps/embed?pb=!4v1791700936306!6m8!1m7!1skylszE0gIZUuO4XrH-J-XA!2m2!1d39.22484755978869!2d141.0090153629621!3f313.77471746564476!4f-14.01631792568898!5f0.7820865974627469"
+          title="千貫石ため池の360度パノラマ"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+      </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!4v1791700936306!6m8!1m7!1skylszE0gIZUuO4XrH-J-XA!2m2!1d39.22484755978869!2d141.0090153629621!3f313.77471746564476!4f-14.01631792568898!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <p>
+        <a href="https://earth.google.com/web/search/岩手県金ヶ崎町西根堤袋+千貫石溜池/"
+           target="_blank" rel="noopener noreferrer">Google Earthで場所を開く</a>
+      </p>
+    </section>
 
-<p> <a href="https://earth.google.com/web/search/岩手県金ヶ崎町西根堤袋+千貫石溜池/" target="_blank" rel="noopener"> Google Earthで場所を開く </a> </p> </section>
-<section>
-  <h2>🎧 音声ガイド</h2>
-  <p>聞きたいガイドを選んでね。</p>
+    <section>
+      <h2>🎧 音声ガイド</h2>
+      <p>聞きたいガイドを選んでね。</p>
 
-  <button onclick="speak('千貫石ため池へようこそ。この場所の景色や自然を360度の映像で楽しみましょう。')">
-    はじめのガイド
-  </button>
+      <div class="buttons">
+        <button type="button" onclick="speak('千貫石ため池へようこそ。この場所の景色や自然を360度の映像で楽しみましょう。')">
+          はじめのガイド
+        </button>
+        <button type="button" onclick="speak('ため池は、農業などに利用する水を蓄える大切な施設です。地域の暮らしを支えています。')">
+          ため池の役割
+        </button>
+        <button type="button" onclick="speak('周囲の自然に注目してみましょう。水辺や植物など、季節によって変わる景色を楽しめます。')">
+          自然ガイド
+        </button>
+        <button type="button" onclick="stopSpeech()">
+          ⏹ 音声を停止
+        </button>
+        <button type="button" onclick="resumeSpeech()">
+          ▶ 音声を再開
+        </button>
+      </div>
+    </section>
+  </main>
 
-  <button onclick="speak('ため池は、農業などに利用する水を蓄える大切な施設です。地域の暮らしを支えています。')">
-    ため池の役割
-  </button>
+  <script>
+    function speak(text) {
+      if (!("speechSynthesis" in window)) {
+        alert("このブラウザーでは音声ガイドに対応していないようです。");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "ja-JP";
+      utterance.rate = 0.9;
+      window.speechSynthesis.speak(utterance);
+    }
 
-  <button onclick="speak('周囲の自然に注目してみましょう。水辺や植物など、季節によって変わる景色を楽しめます。')">
-    自然ガイド
-  </button>
+    function stopSpeech() {
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
 
-  <button onclick="speechSynthesis.cancel()">
-    ⏹ 音声を停止
-  <button onclick="sppechSynthesis.loop()">
-    ■音声を再開
-  </button>
-</section>
-
-</main>
-
-<script> function speak(text) { speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = "ja-JP"; utterance.rate = 0.9; speechSynthesis.speak(utterance); } </script>
-
-</body> </html>
+    function resumeSpeech() {
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.resume();
+      }
+    }
+  </script>
+</body>
+</html>
